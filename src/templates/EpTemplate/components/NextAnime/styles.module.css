@@ -1,0 +1,22 @@
+.div a:hover{
+    color: #FC0000;
+    border: 1px solid #FC0000;
+}
+.div a{
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    padding: .5rem;
+}
+
+.div2{
+    background-color: rgba(0, 0, 0, 0.658);
+    min-height: 3rem;
+    padding: 1rem;
+}
+
+.disable{
+    pointer-events: none;
+    color:rgba(236, 0, 0, 0.418);
+}
+.disable a{ 
+    color:rgba(104, 104, 104, 0.664);
+}

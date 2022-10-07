@@ -1,0 +1,99 @@
+.nav {
+  background: #001c4d; 
+  padding-top: 5px;
+  padding-bottom: 5px; 
+}
+
+.nav a {
+  transition: all .3s; 
+}
+
+.menu > li > div {
+  color: rgba(255,255,255,0.8);
+  font-size: .9rem;
+  font-weight: 600;  
+  padding: 6px 15px;
+  padding-top: 13px;
+}
+
+.menu > li > a:hover {
+  color: rgba(255,255,255,1);
+}
+
+.menu > li:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,0.15); 
+}
+
+.social > li > a {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.75rem;
+}
+
+.social > li > a:hover {
+  color: rgba(255,255,255,1);
+}
+
+.menuButton {
+  background-color: rgba(255, 255, 255, .15); 
+  border-radius: .1875rem;
+  padding: .4rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+@media(max-width:1200px){
+  .spanMobile{  
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.247);  
+    top: 0;
+    bottom:0;
+    left: 0; 
+    right: 0;
+    z-index: 9998; 
+    animation: animation .6s; 
+  }
+  .menu button{
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+    font-size: 2rem;
+  }
+  .menu{
+    background-color: #001c4d;  
+    z-index: 9999;
+    margin: 0;
+    padding: 0;  
+    min-width: 310px;  
+    padding-top: 2rem; 
+    top: 0;
+    bottom:0;
+    left: 0; 
+    position:fixed;
+    overflow-y:scroll; 
+  } 
+  .menu > li:not(:first-child) { 
+    border: 0; 
+  }
+  .animation{
+    animation: animation .6s;
+  } 
+  @keyframes animation {
+    0% {   
+      transform-origin: left;
+      transform: scaleX(0); 
+    } 
+  
+    100% {  
+      transform-origin: left;  
+      transform: scaleX(1); 
+    }
+  } 
+}
+
+@media(max-width:310px){
+  .menu{  
+    min-width: auto;   
+  } 
+}

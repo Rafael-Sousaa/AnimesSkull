@@ -1,0 +1,28 @@
+.div{
+    background-color: rgba(0, 0, 0, 0.658);
+    color: var(--color-text-secondary); 
+    cursor: pointer;  
+} 
+.label1{
+    min-width: 50px; 
+    padding-top: .6rem;
+    height: 3rem;
+    margin: auto 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;  
+    margin-right: 1rem;
+}
+
+.li + li{
+    border-top: 2px solid rgba(255, 255, 255, 0.562);
+}
+
+.li a:hover{
+    color: #FC0000;
+}
+
+.label{
+    padding: 0 1rem; 
+    border-right: 1px solid rgba(255, 255, 255, 0.562);
+}
