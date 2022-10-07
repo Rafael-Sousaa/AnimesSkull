@@ -26,15 +26,19 @@ const LoginTemplate = () => {
   }
   return (
     <>
-      <div className="main-login">
-        <div className="left-login">
-          <h1>Entre para o mundo dos animes</h1>
-          <img src="/images/gojo.png" alt="" className="left-login-imagem" />
+      <div className={styles.mainLogin}>
+        <div className={styles.leftLogin}>
+          <h1 className={styles.h1}>Entre para o mundo dos animes</h1>
+          <img
+            src="/images/gojo.png"
+            alt=""
+            className={styles.leftLoginimagem}
+          />
         </div>
-        <div className="right-login">
-          <form className="card-login" onSubmit={enviarlogin}>
-            <h1>Login</h1>
-            <div className="textfield">
+        <div className={styles.rightLogin}>
+          <form className={styles.cardLogin} onSubmit={enviarlogin}>
+            <h1 className={styles.h1}>Login</h1>
+            <div className={styles.textfield}>
               <label htmlFor="usuario">Usuario</label>
               <input
                 type="text"
@@ -45,7 +49,7 @@ const LoginTemplate = () => {
               />
             </div>
 
-            <div className="textfield">
+            <div className={styles.textfield}>
               <label htmlFor="senha">Senha</label>
               <input
                 type="password"
@@ -56,7 +60,10 @@ const LoginTemplate = () => {
               />
             </div>
 
-            <button type="submit" className="btn-login">
+            <button
+              type="submit"
+              className={`${styles.btnLogin} ${styles.button}`}
+            >
               Login
             </button>
           </form>
