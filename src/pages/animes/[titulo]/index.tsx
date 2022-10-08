@@ -1,21 +1,21 @@
-import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetStaticProps,
-  GetStaticPropsContext
-} from 'next'
+import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import AnimesMock from '@shared/mocks/Animes'
 import { Anime } from '@shared/interfaces'
 import AnimesTemplate from '@templates/AnimesTemplate'
 import { checkIfIsLoggedIn } from '@shared/helpers/auth'
+import PageTemplate from '@templates/PageTemplate'
 
 export interface AnimesPage {
   anime: Anime
 }
 
 const Animes = (props: AnimesPage) => {
-  return <AnimesTemplate {...props.anime} />
+  return (
+    <PageTemplate>
+      <AnimesTemplate {...props.anime} />
+    </PageTemplate>
+  )
 }
 
 interface PreventionParams extends ParsedUrlQuery {

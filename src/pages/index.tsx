@@ -4,27 +4,13 @@ import type {
   NextPage
 } from 'next'
 import { checkIfIsLoggedIn } from 'shared/helpers/auth'
-import AnimesMock from '@shared/mocks/Animes'
-import Link from 'next/link'
 import PageTemplate from '@templates/PageTemplate'
+import HomeTemplate from '@templates/HomeTemplate'
+
 const Home: NextPage = () => {
   return (
     <PageTemplate>
-      <div className="m-5">
-        <h1>Animes</h1>
-        <br />
-        {AnimesMock.map(anime => (
-          <div key={anime.titulo} className={`mb-2`}>
-            <Link
-              href={`/animes/${anime.titulo
-                .toLocaleLowerCase()
-                .replace(/ /g, '-')}`}
-            >
-              <button>{anime.titulo}</button>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <HomeTemplate />
     </PageTemplate>
   )
 }

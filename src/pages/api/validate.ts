@@ -16,18 +16,19 @@ export default async function handler(
   const token = Bearer_token?.replace('Bearer ', '')
 
   switch (method) {
-    case 'POST':
+    case 'GET':
       try {
         const da = jwt.verify(token || '', process.env.TOKEN_SECRET || '')
+
         const { name, password } = da as TokenPayload
 
         if (name == process.env.NAME && password == process.env.PASSWORD) {
           res.status(200).json({ error: false })
         } else {
-          res.status(400).json({ error: true })
+          res.status(200).json({ error: true })
         }
       } catch (error) {
-        res.status(400).json({ error: true })
+        res.status(200).json({ error: true })
       }
       break
     default:

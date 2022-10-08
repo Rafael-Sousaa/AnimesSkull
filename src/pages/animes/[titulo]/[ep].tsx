@@ -4,6 +4,7 @@ import AnimesMock from '@shared/mocks/Animes'
 import { Episodios } from '@shared/interfaces'
 import EpTemplate from '@templates/EpTemplate'
 import { checkIfIsLoggedIn } from '@shared/helpers/auth'
+import PageTemplate from '@templates/PageTemplate'
 
 export interface AnimePage {
   episodio: Episodios
@@ -13,7 +14,11 @@ export interface AnimePage {
 }
 
 const Ep = (props: AnimePage) => {
-  return <EpTemplate {...props} />
+  return (
+    <PageTemplate>
+      <EpTemplate {...props} />
+    </PageTemplate>
+  )
 }
 
 interface PreventionParams extends ParsedUrlQuery {
@@ -27,6 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (
   try {
     const loggedIn = await checkIfIsLoggedIn(context)
     if (!loggedIn.token) throw new Error('error')
+
     const params = context.params as PreventionParams
     try {
       const [temp, ep] = params.ep.split('-')
@@ -56,7 +62,7 @@ export const getServerSideProps: GetServerSideProps = async (
     } catch (error) {
       return {
         redirect: {
-          destination: `/`,
+          destination: `/animes/${params.titulo}`,
           permanent: false
         }
       }

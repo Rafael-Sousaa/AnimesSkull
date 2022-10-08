@@ -1,29 +1,9 @@
-import Header from '@components/Header'
-import AuthService from '@services/auth'
-import { useState } from 'react'
 import styles from './styles.module.css'
-import { setCookie } from 'nookies'
-import { useRouter } from 'next/router'
-import { DtoAuthLoginResponse } from '@services/auth/dtoAuthLoginResponse'
+import useLoginForm from './useLoginForm'
 
 const LoginTemplate = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const router = useRouter()
-  const enviarlogin = async (e: any) => {
-    e.preventDefault()
-    try {
-      const response: DtoAuthLoginResponse = await AuthService.login(
-        username,
-        password
-      )
+  const form = useLoginForm()
 
-      setCookie(null, 'token', response.token, {
-        maxAge: 6000 * 6000 * 2
-      })
-      router.push('/')
-    } catch (error) {}
-  }
   return (
     <>
       <div className={styles.mainLogin}>
@@ -36,36 +16,51 @@ const LoginTemplate = () => {
           />
         </div>
         <div className={styles.rightLogin}>
-          <form className={styles.cardLogin} onSubmit={enviarlogin}>
+          <form
+            className={styles.cardLogin}
+            onSubmit={form.handleSubmit(form.submitForm)}
+          >
             <h1 className={styles.h1}>Login</h1>
             <div className={styles.textfield}>
               <label htmlFor="usuario">Usuario</label>
               <input
                 type="text"
-                name="usuario"
+                className={`form-control ${
+                  !!form.formState.errors.name && 'is-invalid'
+                }`}
                 placeholder="usuario"
-                value={username}
-                onChange={value => setUsername(value.target.value)}
+                {...form.register('name')}
               />
             </div>
-
+            <div className="text-danger">
+              {form.formState.errors.name?.message}
+            </div>
             <div className={styles.textfield}>
               <label htmlFor="senha">Senha</label>
               <input
                 type="password"
-                name="senha"
+                className={`form-control ${
+                  !!form.formState.errors.password && 'is-invalid'
+                }`}
                 placeholder="senha"
-                value={password}
-                onChange={value => setPassword(value.target.value)}
+                {...form.register('password')}
               />
             </div>
-
+            <div className="text-danger">
+              {form.formState.errors.password?.message}
+            </div>
             <button
               type="submit"
-              className={`${styles.btnLogin} ${styles.button}`}
+              className={styles.btnLogin}
+              disabled={
+                form.formState.isSubmitting || form.formState.isValidating
+              }
             >
               Login
             </button>
+            <div className="text-danger">
+              {form.error && 'Credenciais Inválidas'}
+            </div>
           </form>
         </div>
       </div>

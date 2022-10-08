@@ -1,0 +1,17 @@
+{
+    "name": "Animes Skull",
+    "short_name": "Animes Skull", 
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "lang": "pt-BR",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/gojo.png",
+            "sizes": "476x476",
+            "type": "image/png"
+        } 
+    ]
+}
