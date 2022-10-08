@@ -1,0 +1,67 @@
+
+.active {
+  color: #3f6cb2 !important;
+  pointer-events: none;
+}
+ 
+.list  label{ 
+  width: auto;
+  font-size: .9rem;
+  font-weight: 600;  
+  padding:  10px; 
+  border-radius: 6px;
+  color: #333;
+  border: 1px solid #33333342;
+  margin-top: 5px;  
+}
+
+.list label:hover {
+  color: #3f6cb2 !important;
+  border: 1px solid #3f6cb2;
+  cursor: pointer;
+}
+ 
+.menu{        
+  display: grid;
+  grid-template-columns: 50% 50%; 
+  margin-left: 1rem;
+  width: 90%;  
+  background-color: #cccccc; 
+  border-radius:6px ;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+  
+.menu  li {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  padding-right: 1rem; 
+}
+
+.menu  li  a {   
+  font-size: .9rem;
+  font-weight: 600;  
+  padding-right: 1rem; 
+  line-height: 1.7143; 
+  color:#555555;
+  transition: all .3s;  
+  border-radius: 6px; 
+}
+
+.menu > li > a:hover { 
+  color:var(--color-primary); 
+}
+  
+@keyframes animation {
+  0% {   
+    transform-origin: top;
+    transform: scaleY(0); 
+  } 
+
+  100% {  
+    transform-origin: top;  
+    transform: scaleY(1); 
+  }
+}

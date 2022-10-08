@@ -15,7 +15,7 @@ interface subMenus {
   link: string
 }
 
-const NavMenuItem = (props: NavMenuItemProps) => {
+const NavMenuItem2 = (props: NavMenuItemProps) => {
   const router = useRouter()
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => setMenu(!menu)
@@ -67,4 +67,13 @@ const NavMenuItem = (props: NavMenuItemProps) => {
   )
 }
 
-export default NavMenuItem
+export default NavMenuItem2
+
+/*
+
+ {routesArray.map(route => (
+                  <li key={route.title}>
+                    <NavMenuItem {...route} />
+                  </li>
+                ))}
+*/

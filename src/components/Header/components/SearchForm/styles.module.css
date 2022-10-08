@@ -1,0 +1,37 @@
+.form { 
+  display: inline-block;
+  padding: 2px;
+  background-color: #fff;
+  border-radius: 6px;
+  padding-left: 10px;
+  height: 2.7rem; 
+}
+
+.form > input {
+  border: none;  
+  padding: 5px; 
+  height: 1.5rem;
+}
+
+.form > button { 
+  border: none; 
+  background-color: #fff;
+  color: var(--color-primary);
+  padding: 3px 9px; 
+  padding-bottom: 5px; 
+  margin-bottom: 2px;
+  height: 1rem;
+}
+
+.form > button:hover{
+  filter: brightness(100%);
+}
+
+@media (max-width:1200px){
+  .form { 
+    padding-left: auto;
+    height: auto;  
+    padding-bottom: 5px;
+  }
+}
+ 

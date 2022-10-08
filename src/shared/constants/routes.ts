@@ -11,23 +11,23 @@ interface subMenus {
 const routes: Array<NavMenuItemProps> = [
   {
     title: 'Animes',
-    link: '/animes',
+    link: '#',
     hasSubMenus: true,
     subMenus: [
-      { title: 'Filmes', link: '/animes/comedia' },
-      { title: 'Dublado', link: 'animes/isekai' },
-      { title: 'Episodios', link: 'animes/isekai' },
-      { title: 'Populares', link: '/animes/acao' }
+      { title: 'Filmes', link: '#' },
+      { title: 'Dublado', link: '#' },
+      { title: 'Episodios', link: '#' },
+      { title: 'Populares', link: '#' }
     ]
   },
   {
     title: 'Gêneros',
-    link: '/genero',
+    link: '#',
     hasSubMenus: true,
     subMenus: [
-      { title: 'Comédia', link: '/genero/comedia' },
-      { title: 'Ação', link: '/genero/acao' },
-      { title: 'Isekai', link: 'genero/isekai' }
+      { title: 'Comédia', link: '#' },
+      { title: 'Ação', link: '#' },
+      { title: 'Isekai', link: '#' }
     ]
   }
 ]
