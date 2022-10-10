@@ -10,7 +10,7 @@ const AnimesTemplate = (props: Anime) => {
   const [vez, setVez] = useState(0)
 
   return (
-    <div className={'pb-5'}>
+    <div className={styles.div666}>
       <div className={styles.div}>
         <Link href={'/'}>
           <button>home</button>
@@ -29,13 +29,16 @@ const AnimesTemplate = (props: Anime) => {
           <div>
             <h1>{props.titulo}</h1>
             <br />
-            <div className={`d-flex gap-2 align-items-center`}>
+            <div className={`gap-2 align-items-center`}>
               <p className={styles.desc}>GÊNEROS: </p>
-              {props.generos.map(genero => (
-                <p key={genero.genero} className={styles.desc2}>
-                  {genero.genero}
-                </p>
-              ))}
+              <br />
+              <div className={styles.desc2}>
+                {props.generos.map(genero => (
+                  <div key={genero.genero}>
+                    <p>{genero.genero}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className={`d-flex gap-2 align-items-center`}>
               <p className={styles.desc}>Ano: </p>

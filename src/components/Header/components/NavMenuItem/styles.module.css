@@ -10,14 +10,13 @@
   font-weight: 600;  
   padding:  10px; 
   border-radius: 6px;
-  color: #333;
+  color: #f0e7ea;
   border: 1px solid #33333342;
   margin-top: 5px;  
+  background-color: rgba(12, 12, 12, 0.80);
 }
 
 .list label:hover {
-  color: #3f6cb2 !important;
-  border: 1px solid #3f6cb2;
   cursor: pointer;
 }
  
@@ -26,12 +25,13 @@
   grid-template-columns: 50% 50%; 
   margin-left: 1rem;
   width: 90%;  
-  background-color: #cccccc; 
   border-radius:6px ;
   margin-top: .5rem;
   margin-bottom: .5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  background-color: rgba(12, 12, 12, 0.80);
+  color: #f0e7ea;
 }
   
 .menu  li {
@@ -45,7 +45,7 @@
   font-weight: 600;  
   padding-right: 1rem; 
   line-height: 1.7143; 
-  color:#555555;
+  color: #f0e7ea;
   transition: all .3s;  
   border-radius: 6px; 
 }

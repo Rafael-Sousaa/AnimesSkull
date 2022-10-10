@@ -16,6 +16,7 @@
 } 
 
 html,body,#root{
+  font-family: 'Roboto Slab', serif;
   height:100%;  
   background-color: var(--color-bg-secondary);
 }

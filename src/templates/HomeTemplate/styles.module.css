@@ -1,0 +1,8 @@
+.div{
+    height: 100vh;
+    background-image: url('/images/asta.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}

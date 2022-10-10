@@ -17,7 +17,6 @@ const Ep = (props: AnimePage) => {
   return (
     <PageTemplate>
       <EpTemplate {...props} />
-      <div className="pt-2" />
     </PageTemplate>
   )
 }

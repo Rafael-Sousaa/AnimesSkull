@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './styles.module.css'
 import useLoginForm from './useLoginForm'
 
@@ -22,13 +23,13 @@ const LoginTemplate = () => {
           >
             <h1 className={styles.h1}>Login</h1>
             <div className={styles.textfield}>
-              <label htmlFor="usuario">Usuario</label>
+              <label htmlFor="usuario">E-mail ou Nome</label>
               <input
                 type="text"
                 className={`form-control ${
                   !!form.formState.errors.name && 'is-invalid'
                 }`}
-                placeholder="usuario"
+                placeholder="E-mail ou Nome"
                 {...form.register('name')}
               />
             </div>
@@ -42,7 +43,7 @@ const LoginTemplate = () => {
                 className={`form-control ${
                   !!form.formState.errors.password && 'is-invalid'
                 }`}
-                placeholder="senha"
+                placeholder="Senha"
                 {...form.register('password')}
               />
             </div>
@@ -61,6 +62,9 @@ const LoginTemplate = () => {
             <div className="text-danger">
               {form.error && 'Credenciais Inválidas'}
             </div>
+            <Link href={'/cadastro'}>
+              <a className={styles.link}>Cadastre-se</a>
+            </Link>
           </form>
         </div>
       </div>

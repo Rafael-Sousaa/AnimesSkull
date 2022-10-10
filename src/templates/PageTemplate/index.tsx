@@ -8,7 +8,7 @@ const PageTemplate = (props: PageTemplateProps) => {
     <>
       <Header />
       <div className="pt-5" />
-      <div className="mt-5" />
+
       <main>{props.children}</main>
     </>
   )

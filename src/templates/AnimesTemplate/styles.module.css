@@ -1,11 +1,13 @@
 .div{
     max-width: 95%;
     margin:  auto;
-    margin-top: 2rem;
+    margin-top: 10px;
     margin-bottom: 2rem;
-    background-color: rgba(0, 0, 0, 0.555);
+    background-color: rgba(0, 0, 0, 0.8);
+    color:#f0e7ea;
     padding: 2rem; 
     min-height: 95vh; 
+    
 }
 
 .desc{
@@ -16,4 +18,15 @@
  
 .div2{ 
     align-items: center;
+}
+
+.desc2{
+   display: grid;
+   grid-template-columns: auto auto;
+}
+
+.div666{
+    background-image: url('/images/slimefundo.jpg');
+    background-position: center;
+    background-size: cover;
 }
