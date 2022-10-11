@@ -14,7 +14,7 @@ export default class AuthService {
   }
 
   static async cadastrar(name: string, password: string, email: string) {
-    const response = await api.post<DtoAuthCadastroResponse>('/api/user', {
+    const response = await api.post<DtoAuthCadastroResponse>('/api/user/user', {
       name,
       password,
       email
