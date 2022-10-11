@@ -17,7 +17,19 @@ const useCadastroForm = () => {
 
   const submitForm: SubmitHandler<Inputs> = React.useCallback(
     async data => {
-      router.push('/login')
+      try {
+        setError(false)
+        const response = await AuthService.cadastrar(
+          data.name,
+          data.password,
+          data.email
+        )
+        if (response.error) throw new Error()
+
+        router.push('/login')
+      } catch {
+        setError(true)
+      }
     },
     [router]
   )

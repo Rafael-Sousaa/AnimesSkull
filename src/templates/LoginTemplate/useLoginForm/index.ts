@@ -20,6 +20,7 @@ const useLoginForm = () => {
     async data => {
       try {
         setError(false)
+
         const response = await AuthService.login(data.name, data.password)
         if (!response.token) throw new Error()
         setCookie(null, 'token', response.token, {
