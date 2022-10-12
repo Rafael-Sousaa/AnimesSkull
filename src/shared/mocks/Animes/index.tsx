@@ -1,7 +1,59 @@
 import { Anime } from '@shared/interfaces'
-import * as Episodeos from '../Episodios'
+import * as Episodios from '../Episodios'
 
 const Animes: Array<Anime> = [
+  {
+    titulo: 'Chainsaw Man',
+    imagem: '/images/chaisawman.jpg',
+    sinopse:
+      'Denji tem um sonho simples – viver uma vida feliz e pacífica, passando um tempo com uma garota de quem gosta. Isso está muito longe da realidade, no entanto, já que Denji é forçado pela yakuza a matar demônios para pagar suas dívidas esmagadoras. Usando seu demônio de estimação Pochita como arma, ele está pronto para fazer qualquer coisa por um pouco de dinheiro.',
+    ano: '2022',
+    generos: [
+      { genero: 'Ação' },
+      { genero: 'Aventura' },
+      { genero: 'Sobrenatural' },
+      { genero: 'Fantasia' },
+
+      { genero: 'Shounen' }
+    ],
+    temporadas: [
+      {
+        temporada: 1,
+        episodios: [
+          {
+            episodio: 1,
+            imagem: '/images/chaisawman11.jpg',
+            video: Episodios.ChainsawMan.ep1
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    titulo: 'Blue Lock',
+    imagem: '/images/bluelock.jpg',
+    sinopse:
+      'Após sofrer um vexame na Copa do Mundo de 2018, a seleção japonesa sofre para se recompor. Falta ao time um artilheiro, uma estrela capaz de guiá-los à vitória. Com o intuito de criar um atacante com fome de bola e sede de vitória, capaz de virar jogos tidos como impossíveis, a Confederação Japonesa de Futebol reune 300 dos melhores jogadores de base do país em um só lugar. Centenas de jovens vão se enfrentar numa batalha de músculos e de egos para provar que são os melhores',
+    ano: '2022',
+    generos: [
+      { genero: 'Drama' },
+      { genero: 'Esporte' },
+      { genero: 'Slice of life' }
+    ],
+    temporadas: [
+      {
+        temporada: 1,
+        episodios: [
+          {
+            episodio: 1,
+            imagem: '/images/bluelock11.jpg',
+            video: Episodios.BlueLock.ep1
+          }
+        ]
+      }
+    ]
+  },
   {
     titulo: 'Tensei Shitara Slime Datta Ken Dublado',
     imagem: '/images/slime.jpg',
@@ -24,17 +76,17 @@ const Animes: Array<Anime> = [
         episodios: [
           {
             episodio: 1,
-            video: Episodeos.Slime1.ep1,
+            video: Episodios.Slime1.ep1,
             imagem: '/images/slime11.jpg'
           },
           {
             episodio: 2,
-            video: Episodeos.Slime1.ep2,
+            video: Episodios.Slime1.ep2,
             imagem: '/images/slime12.jpg'
           },
           {
             episodio: 3,
-            video: Episodeos.Slime1.ep3,
+            video: Episodios.Slime1.ep3,
             imagem: '/images/slime13.jpg'
           }
         ]
@@ -44,17 +96,17 @@ const Animes: Array<Anime> = [
         episodios: [
           {
             episodio: 1,
-            video: Episodeos.Slime2.ep1,
+            video: Episodios.Slime2.ep1,
             imagem: '/images/slime21.jpg'
           },
           {
             episodio: 2,
-            video: Episodeos.Slime2.ep2,
+            video: Episodios.Slime2.ep2,
             imagem: '/images/slime22.jpg'
           },
           {
             episodio: 3,
-            video: Episodeos.Slime2.ep3,
+            video: Episodios.Slime2.ep3,
             imagem: '/images/slime23.jpg'
           }
         ]
@@ -80,17 +132,17 @@ const Animes: Array<Anime> = [
         episodios: [
           {
             episodio: 1,
-            video: Episodeos.BlackSummoner.ep1,
+            video: Episodios.BlackSummoner.ep1,
             imagem: '/images/BlackSummoner11.jpg'
           },
           {
             episodio: 2,
-            video: Episodeos.BlackSummoner.ep2,
+            video: Episodios.BlackSummoner.ep2,
             imagem: '/images/BlackSummoner12.jpg'
           },
           {
             episodio: 3,
-            video: Episodeos.BlackSummoner.ep3,
+            video: Episodios.BlackSummoner.ep3,
             imagem: '/images/BlackSummoner13.jpg'
           }
         ]
@@ -114,17 +166,17 @@ const Animes: Array<Anime> = [
         episodios: [
           {
             episodio: 1,
-            video: Episodeos.LycorisRecoil.ep1,
+            video: Episodios.LycorisRecoil.ep1,
             imagem: '/images/LycorisRecoil11.jpg'
           },
           {
             episodio: 2,
-            video: Episodeos.LycorisRecoil.ep2,
+            video: Episodios.LycorisRecoil.ep2,
             imagem: '/images/LycorisRecoil12.jpg'
           },
           {
             episodio: 3,
-            video: Episodeos.LycorisRecoil.ep3,
+            video: Episodios.LycorisRecoil.ep3,
             imagem: '/images/LycorisRecoil13.jpg'
           }
         ]

@@ -83,14 +83,15 @@ const Header = () => {
                 <SearchForm />
               </div>
             </div>
-            <div style={{ gridArea: 'logo' }}>
+            <div
+              style={{
+                gridArea: 'logo',
+                marginTop: '5px',
+                color: '#F0E7EA'
+              }}
+            >
               <Link href="/">
-                <Image
-                  src="/images/gojo.png"
-                  width={50}
-                  height={50}
-                  alt="Gojo Logo"
-                />
+                <h1 className={styles.h1logo}>Animes Skull</h1>
               </Link>
             </div>
             <div style={{ gridArea: 'menu' }}>

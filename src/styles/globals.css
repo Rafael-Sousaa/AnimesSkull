@@ -44,4 +44,9 @@ ul{
   list-style:none;
 }
  
-
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+  height: 7088px !important;
+  width: 4rem !important;
+  height: 4rem !important;
+}

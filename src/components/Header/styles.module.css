@@ -12,9 +12,8 @@
   transition: ease  margin-top 0.4s ;
   padding-left: 5rem;
   padding-right: 5rem;
-  background-image: url('/images/bakcground.jpg');
-  background-size: cover;
-  background-position: center;
+  height: 74px;
+  
 }
 .navmenuHidden{
   position: absolute; 
@@ -95,7 +94,7 @@
 
 .divSearch{  
   position: absolute;
-  margin-top: 75px;  
+  margin-top: 60px;  
   z-index: 9999999999999 ;
   left: 0;
   width: 100%;
@@ -232,6 +231,10 @@
   transition: all .3s; 
 }
 
+.h1logo{
+  font-size: 2rem;
+}
+
 @keyframes animation {
   0% {   
     opacity: 0;
@@ -252,4 +255,13 @@
     
 }
 
+}
+
+@media (max-width:768px){
+  .h1logo{
+    font-size: 1rem;
+  }
+  .navmenu {
+    height: 61px;
+  }
 }
