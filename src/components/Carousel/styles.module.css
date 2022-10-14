@@ -1,14 +1,15 @@
 .div{
   height: 70vh;
+  
 }
 
 .div img{
   width: 100%;
   height: 70vh;
   object-fit: cover;
+  z-index: 2;
+ 
 }
-
-
 
 
 @media (max-width:768px){
@@ -19,7 +20,22 @@
   
   .div img{
     width: auto;
-    height: auto;
+    height: 35vh;
     object-fit: auto;
+  }
+  .div2 p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: .9rem;
+  }
+  .div2 h2{
+    font-size: 1.2rem;
+  }
+  .button{
+    padding: 5px 10px;
+    font-size: .8rem;
   }
 }

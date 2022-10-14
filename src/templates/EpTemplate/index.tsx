@@ -15,10 +15,14 @@ const EpTemplate = (props: AnimePage) => {
             temp={props.temp}
           />
         </div>
-        <div
-          className={styles.div}
-          dangerouslySetInnerHTML={{ __html: props.episodio.video }}
-        />
+        <div className={styles.div}>
+          <video
+            src={props.episodio.video}
+            preload="metadata"
+            style={{ objectFit: 'fill' }}
+            controls
+          ></video>
+        </div>
         <br />
         <div className={styles.div4}>
           <div className={styles.div5}>

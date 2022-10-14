@@ -1,4 +1,5 @@
 export interface Anime {
+  abreviacao?: string
   titulo: string
   imagem: string
   sinopse: string
@@ -20,4 +21,11 @@ export interface Episodios {
   episodio: number
   imagem: string
   video: string
+}
+
+export interface CarouselInterface {
+  titulo: string
+  sinopse: string
+  link: string
+  imagem: string
 }

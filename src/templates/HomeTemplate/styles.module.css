@@ -4,3 +4,60 @@
     margin: 0;
     padding: 0;
 }
+
+.divAnimes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+    gap: 1.5rem;
+    text-align: center;
+    
+    
+}
+
+
+.divAnimes img{
+    border-radius:6px ;
+}
+
+.botao{
+    cursor: pointer;
+    margin: 0;
+}
+
+.botao:hover{
+    transform: scale(105%);
+    transition: all .5s;
+}
+
+
+.divAnimes a{
+    color: black;
+}
+
+.divAnimes p{
+    margin: 0;
+}
+
+@media (max-width: 595px){
+    .divAnimes{
+        grid-template-columns: repeat(auto-fill, minmax(135px, 135px));
+    }
+    .divAnimes img{
+        max-width: 135px;
+        max-height:222px;
+    }    
+}
+
+@media (max-width: 375px){
+    .divAnimes{
+        grid-template-columns: repeat(auto-fill, minmax(120px, 120px));
+    }
+    .divAnimes img{
+        max-width: 120px;
+        max-height:207px;
+    }    
+    .divAnimes p{
+       font-size: 14px;
+    }
+}
+

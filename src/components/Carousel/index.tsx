@@ -1,6 +1,8 @@
 import styles from './styles.module.css'
 import Carousel from 'react-bootstrap/Carousel'
-
+import CarouselMock from '@shared/mocks/CarouselMock'
+import Link from 'next/link'
+import { AiFillPlayCircle } from 'react-icons/ai'
 const CarouselComponent = () => {
   return (
     <div className={styles.div}>
@@ -19,41 +21,23 @@ const CarouselComponent = () => {
           />
         }
       >
-        <Carousel.Item className={styles.div}>
-          <img
-            src="/images/chaisawmancarousel.jpg"
-            className="d-block w-100"
-            alt=""
-          />
-          <Carousel.Caption>
-            <h2>Denji</h2>
-            <p>Serra Eletrica</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item className={styles.div}>
-          <img
-            src="/images/ichigocarousel.jpg"
-            className="d-block w-100"
-            alt=""
-          />
+        {CarouselMock.map(carousel => (
+          <Carousel.Item className={styles.div} key={carousel.titulo}>
+            <img src={carousel.imagem} className="d-block w-100" alt="" />
 
-          <Carousel.Caption>
-            <h3>Ichigo True Bankai</h3>
-            <p>Bleach</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item className={styles.div}>
-          <img
-            src="/images/onepiececarousel.jpg"
-            className="d-block w-100"
-            alt=""
-          />
-
-          <Carousel.Caption>
-            <h3>Luffy</h3>
-            <p>One Piece</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+            <Carousel.Caption>
+              <div className={styles.div2}>
+                <h2>{carousel.titulo}</h2>
+                <p>{carousel.sinopse}</p>
+              </div>
+              <Link href={carousel.link}>
+                <button className={styles.button}>
+                  <AiFillPlayCircle /> Assistir agora
+                </button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
       </Carousel>
     </div>
   )
