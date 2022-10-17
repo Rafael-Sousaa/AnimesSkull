@@ -42,12 +42,12 @@ export default async function handler(
         let dataName: string = ''
         let dataEmail: string = ''
         const userName = await getUserName(name)
-        if (!userName) {
+        if (userName) {
           dataName = 'Nome já existe'
         }
 
         const userEmail = await getUserEmail(email)
-        if (!userEmail) {
+        if (userEmail) {
           dataEmail = 'E-mail já existe'
         }
 

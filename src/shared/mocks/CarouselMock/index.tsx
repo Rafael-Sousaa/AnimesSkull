@@ -8,7 +8,7 @@ const CarouselMock: Array<CarouselInterface> = [
     devorar almas humanas. É então que ele conhece uma Soul Reaper
     chamada Rukia Kuchiki, que é ferida enquanto protegia a família de
     Ichigo do agressor.`,
-    link: '/animes/bleach',
+    link: '/animes/bleach-sennen-kessen-hen	',
     imagem: '/images/ichigocarousel.jpg'
   },
   {

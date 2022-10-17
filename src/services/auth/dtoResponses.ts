@@ -28,9 +28,9 @@ export interface DtoErrorResponse {
 }
 
 export interface DtoErrorCadastroResponse {
-  error: boolean
-  name: string
-  email: string
+  response: {
+    data: { error: boolean; name: string; email: string }
+  }
 }
 
 export interface DtoSuccessResponse {

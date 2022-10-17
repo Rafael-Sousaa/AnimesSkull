@@ -72,6 +72,7 @@ const CadastroTemplate = () => {
             >
               Cadastrar
             </button>
+
             <div className="text-danger">
               {form.error?.map(error => (
                 <p key={error}>{error}</p>

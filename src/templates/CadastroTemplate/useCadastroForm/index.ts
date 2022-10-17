@@ -26,12 +26,13 @@ const useCadastroForm = () => {
           data.email
         )
         if (response.error) {
-          const res = response as unknown as DtoErrorCadastroResponse
-          setError([res.name, res.email])
         } else {
           router.push('/login')
         }
-      } catch {}
+      } catch (error) {
+        const res = error as unknown as DtoErrorCadastroResponse
+        setError([res.response.data.name, res.response.data.email])
+      }
     },
     [router]
   )
