@@ -233,6 +233,7 @@
 
 .h1logo{
   font-size: 2rem;
+  cursor: pointer;
 }
 
 @keyframes animation {

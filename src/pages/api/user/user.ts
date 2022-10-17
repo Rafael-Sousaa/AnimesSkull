@@ -1,5 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { createUser, getAllUsers } from 'services/lib/db'
+import {
+  createUser,
+  getAllUsers,
+  getUserEmail,
+  getUserName
+} from 'services/lib/db'
 import bcrypt from 'bcrypt'
 
 export default async function handler(
@@ -7,6 +12,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { method } = req
+  const { name, email, password } = req.body
 
   switch (method) {
     case 'GET':
@@ -20,7 +26,6 @@ export default async function handler(
       break
 
     case 'POST':
-      const { name, email, password } = req.body
       try {
         const passwordHash = bcrypt.hashSync(password, 10)
         const data = {
@@ -32,9 +37,25 @@ export default async function handler(
         await createUser(data)
         res
           .status(200)
-          .json({ message: 'Created successfully', data, error: false })
+          .json({ error: false, msg: 'Created successfully', data })
       } catch (error) {
-        res.status(400).json({ error: true, message: error })
+        let dataName: string = ''
+        let dataEmail: string = ''
+        const userName = await getUserName(name)
+        if (!userName) {
+          dataName = 'Nome já existe'
+        }
+
+        const userEmail = await getUserEmail(email)
+        if (!userEmail) {
+          dataEmail = 'E-mail já existe'
+        }
+
+        res.status(400).json({
+          error: true,
+          name: dataName,
+          email: dataEmail
+        })
       }
       break
 

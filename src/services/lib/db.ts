@@ -41,6 +41,15 @@ export async function getUserEmail(email: string) {
   return data
 }
 
+export async function getUserName(name: string) {
+  const data = await prisma.user.findFirst({
+    where: {
+      name
+    }
+  })
+  return data
+}
+
 export async function createUser(data: UserType) {
   await prisma.user.create({
     data
@@ -48,11 +57,20 @@ export async function createUser(data: UserType) {
 }
 
 export async function updateUser(id: number, data: UserType) {
+  let password: string | undefined = undefined
+  if (data.password_hash !== '') {
+    password = data.password_hash
+  }
+
   await prisma.user.update({
     where: {
       id
     },
-    data
+    data: {
+      email: data.email,
+      name: data.name,
+      password_hash: password
+    }
   })
 }
 

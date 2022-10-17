@@ -73,7 +73,9 @@ const CadastroTemplate = () => {
               Cadastrar
             </button>
             <div className="text-danger">
-              {form.error && 'Credenciais Inválidas'}
+              {form.error?.map(error => (
+                <p key={error}>{error}</p>
+              ))}
             </div>
             <Link href={'/login'}>
               <a className={styles.link}>Fazer Login</a>

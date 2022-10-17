@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse, NextApiHandler } from 'next'
 import validateUser from 'services/lib/validate'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json({ message: 'Ok' })
+  res.status(200).json({ error: false, msg: 'Ok' })
 }
 
 export function validate(handler: NextApiHandler) {

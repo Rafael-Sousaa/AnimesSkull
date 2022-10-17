@@ -6,3 +6,5 @@ export const validation = yup.object({
 })
 
 export interface Inputs extends yup.InferType<typeof validation> {}
+
+export const isEmail = yup.string().email()

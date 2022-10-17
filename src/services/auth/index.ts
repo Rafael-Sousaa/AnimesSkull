@@ -1,20 +1,19 @@
 import api from '..'
-import { DtoAuthLoginResponse } from './dtoAuthLoginResponse'
-import { DtoAuthValidateResponse } from './dtoAuthValidateResponse'
+import * as dto from './dtoResponses'
 import { destroyCookie } from 'nookies'
-import { DtoAuthCadastroResponse } from './dtoAuthCadastroResponse'
 
 export default class AuthService {
-  static async login(name: string, password: string) {
-    const response = await api.post<DtoAuthLoginResponse>('/api/user/login', {
-      email: name,
+  static async login(nome: string, email: string, password: string) {
+    const response = await api.post<dto.DtoLoginResponse>('/api/user/login', {
+      email,
+      nome,
       password
     })
     return response.data
   }
 
   static async cadastrar(name: string, password: string, email: string) {
-    const response = await api.post<DtoAuthCadastroResponse>('/api/user/user', {
+    const response = await api.post<dto.DtoCadastroResponse>('/api/user/user', {
       name,
       password,
       email
@@ -22,8 +21,39 @@ export default class AuthService {
     return response.data
   }
 
+  static async atualizar(
+    id: number,
+    name: string,
+    password: string,
+    email: string,
+    token: string
+  ) {
+    const response = await api.put<dto.DtoSuccessResponse>(
+      `/api/user/${id}`,
+      {
+        name,
+        password,
+        email
+      },
+      {
+        headers: { authorization: `Bearer ${token}` }
+      }
+    )
+    return response.data
+  }
+
+  static async deletar(id: number, token: string) {
+    const response = await api.delete<dto.DtoSuccessResponse>(
+      `/api/user/${id}`,
+      {
+        headers: { authorization: `Bearer ${token}` }
+      }
+    )
+    return response.data
+  }
+
   static async validate(token: string) {
-    const response = await api.get<DtoAuthValidateResponse>(
+    const response = await api.get<dto.DtoValidateResponse>(
       `${
         process.env.NODE_ENV === 'production'
           ? 'https://animes-skull.vercel.app/api/user/validate'

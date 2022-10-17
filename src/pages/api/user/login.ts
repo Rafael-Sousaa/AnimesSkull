@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
-import { getUserEmail } from 'services/lib/db'
+import { getUserEmail, getUserName } from 'services/lib/db'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
@@ -12,13 +12,19 @@ export default async function handler(
   switch (method) {
     case 'POST':
       try {
-        const { email, password } = req.body
+        const { nome, email, password } = req.body
 
-        if (!email || !password) {
+        if ((nome === '' && email === '') || !password) {
           return res.status(400).json({ error: true, msg: 'Invalid data' })
         }
+        let user
 
-        const user = await getUserEmail(email)
+        if (email !== '') {
+          user = await getUserEmail(email)
+        } else {
+          user = await getUserName(nome)
+        }
+
         if (!user) {
           return res.status(400).json({ error: true, msg: 'User not found' })
         }

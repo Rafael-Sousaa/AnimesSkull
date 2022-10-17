@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { setCookie } from 'nookies'
 
-import { Inputs, validation } from './validate'
+import { Inputs, isEmail, validation } from './validate'
 import { useRouter } from 'next/router'
 import AuthService from '@services/auth'
 
@@ -20,9 +20,20 @@ const useLoginForm = () => {
     async data => {
       try {
         setError(false)
+        let name: string = ''
+        let email: string = ''
 
-        const response = await AuthService.login(data.name, data.password)
+        isEmail.isValid(data.name).then(valid => {
+          if (valid == true) {
+            email = data.name
+          } else {
+            name = data.name
+          }
+        })
+
+        const response = await AuthService.login(name, email, data.password)
         if (!response.token) throw new Error()
+
         setCookie(null, 'token', response.token, {
           maxAge: 60 * 60 * 24 * 30
         })
