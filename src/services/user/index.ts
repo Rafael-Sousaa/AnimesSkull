@@ -3,17 +3,17 @@ import * as dto from './dtoResponses'
 import { destroyCookie } from 'nookies'
 
 export default class AuthService {
-  static async login(nome: string, email: string, password: string) {
+  static async login(name: string, email: string, password: string) {
     const response = await api.post<dto.DtoLoginResponse>('/api/user/login', {
       email,
-      nome,
+      name,
       password
     })
     return response.data
   }
 
   static async cadastrar(name: string, password: string, email: string) {
-    const response = await api.post<dto.DtoCadastroResponse>('/api/user/user', {
+    const response = await api.post<dto.DtoCadastroResponse>('/api/user', {
       name,
       password,
       email
@@ -51,12 +51,14 @@ export default class AuthService {
     )
     return response.data
   }
+
   static async buscarUsuario(id: number, token: string) {
     const response = await api.get<dto.DtoUserResponse>(`/api/user/${id}`, {
       headers: { authorization: `Bearer ${token}` }
     })
     return response.data
   }
+
   static async validate(token: string) {
     const response = await api.get<dto.DtoValidateResponse>(
       `${

@@ -6,10 +6,11 @@ import { setCookie } from 'nookies'
 import { Inputs, isEmail, validation } from './validate'
 import { useRouter } from 'next/router'
 import AuthService from '@services/user'
+import { DtoErrorLoginResponse } from '@services/user/dtoResponses'
 
 const useLoginForm = () => {
   const router = useRouter()
-  const [error, setError] = React.useState<boolean>()
+  const [error, setError] = React.useState<string | undefined>()
 
   const form = useForm<Inputs>({
     resolver: yupResolver(validation),
@@ -19,17 +20,12 @@ const useLoginForm = () => {
   const submitForm: SubmitHandler<Inputs> = React.useCallback(
     async data => {
       try {
-        setError(false)
+        setError('')
         let name: string = ''
         let email: string = ''
 
-        isEmail.isValid(data.name).then(valid => {
-          if (valid == true) {
-            email = data.name
-          } else {
-            name = data.name
-          }
-        })
+        if (await isEmail.isValid(data.name)) email = data.name.toString()
+        if (!(await isEmail.isValid(data.name))) name = data.name.toString()
 
         const response = await AuthService.login(name, email, data.password)
         if (!response.token) throw new Error()
@@ -37,9 +33,10 @@ const useLoginForm = () => {
         setCookie(null, 'token', response.token, {
           maxAge: 60 * 60 * 24 * 30
         })
-        router.push('/')
-      } catch {
-        setError(true)
+        router.replace('/')
+      } catch (error) {
+        const res = error as unknown as DtoErrorLoginResponse
+        setError(res.response.data.msg)
       }
     },
     [router]

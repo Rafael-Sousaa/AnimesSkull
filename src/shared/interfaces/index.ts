@@ -33,4 +33,6 @@ export interface User {
   id: number
   name: string
   email: string
+  img_perfil: string
+  img_fundo: string
 }

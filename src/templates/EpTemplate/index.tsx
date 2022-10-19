@@ -30,7 +30,7 @@ const EpTemplate = (props: AnimePage) => {
               .slice(1)
               .replace(/-/g, ' ')}`}</h2>
             <h2>
-              Tempodara-{props.temp} / Episódio-{props.episodio.episodio}
+              Tempodara-{props.temp} - Episódio-{props.episodio.episodio}
             </h2>
           </div>
         </div>

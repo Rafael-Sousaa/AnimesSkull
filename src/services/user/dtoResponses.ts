@@ -1,6 +1,9 @@
+import { User } from '@shared/interfaces'
+
 export interface DtoValidateResponse {
   error: boolean
-  msg: string
+  msg?: string
+  user: User
 }
 
 export interface DtoLoginResponse {
@@ -33,6 +36,12 @@ export interface DtoErrorCadastroResponse {
   }
 }
 
+export interface DtoErrorLoginResponse {
+  response: {
+    data: { error: boolean; msg: string }
+  }
+}
+
 export interface DtoSuccessResponse {
   msg: string
 }
@@ -41,4 +50,6 @@ export interface DtoUserResponse {
   id: number
   name: string
   email: string
+  img_perfil: string
+  img_fundo: string
 }

@@ -1,15 +1,14 @@
-import type {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  NextPage
-} from 'next'
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import { checkIfIsLoggedIn } from 'shared/helpers/auth'
 import PageTemplate from '@templates/PageTemplate'
 import HomeTemplate from '@templates/HomeTemplate'
 
-const Home: NextPage = () => {
+interface homeProps {
+  img: string
+}
+const Home = (props: homeProps) => {
   return (
-    <PageTemplate>
+    <PageTemplate img={props.img}>
       <HomeTemplate />
     </PageTemplate>
   )
@@ -23,7 +22,9 @@ export const getServerSideProps: GetServerSideProps = async (
     if (!loggedIn.token) throw new Error('error')
 
     return {
-      props: {}
+      props: {
+        img: loggedIn.user.img_perfil
+      }
     }
   } catch (error) {
     return {

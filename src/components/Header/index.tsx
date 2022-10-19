@@ -12,7 +12,11 @@ import NavMenuItem2 from './components/NavMenuItem2'
 
 const routesArray = Object.values(routes)
 
-const Header = () => {
+export interface headerProps {
+  img: string
+}
+
+const Header = (props: headerProps) => {
   const [showMenu, setShowMenu] = React.useState(false)
   const [showSearch, setShowSearch] = React.useState(false)
 
@@ -139,15 +143,15 @@ const Header = () => {
                 style={{ gridArea: 'perfil', cursor: 'pointer' }}
                 className={styles.perfil}
               >
-                <Link href={'/perfil'}>
+                <a href={'/perfil'}>
                   <img
                     className={`d-block rounded-circle m-0 p-0 `}
-                    src={'/images/itadoriperfil.png'}
+                    src={props.img}
                     alt="perfil"
                     width={50}
                     height={50}
                   />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

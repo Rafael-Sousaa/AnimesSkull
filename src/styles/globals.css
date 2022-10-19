@@ -17,8 +17,7 @@
 
 html,body,#root{
   font-family: 'Roboto Slab', serif;
-  height:100%;  
-  background-color: var(--color-bg-secondary);
+  height:100%;   
 }
 
 button{
@@ -42,11 +41,4 @@ a {
 
 ul{
   list-style:none;
-}
- 
-.carousel-control-next-icon,
-.carousel-control-prev-icon{
-  height: 7088px !important;
-  width: 3rem !important;
-  height: 3rem !important;
 }

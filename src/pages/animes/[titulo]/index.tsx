@@ -8,11 +8,12 @@ import PageTemplate from '@templates/PageTemplate'
 
 export interface AnimesPage {
   anime: Anime
+  img: string
 }
 
 const Animes = (props: AnimesPage) => {
   return (
-    <PageTemplate>
+    <PageTemplate img={props.img}>
       <AnimesTemplate {...props.anime} />
     </PageTemplate>
   )
@@ -20,12 +21,6 @@ const Animes = (props: AnimesPage) => {
 
 interface PreventionParams extends ParsedUrlQuery {
   titulo: string
-}
-
-interface Params {
-  params: {
-    titulo: string
-  }
 }
 
 export const getServerSideProps: GetServerSideProps = async (
@@ -44,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async (
     if (!anime) throw new Error('error')
 
     return {
-      props: { anime }
+      props: { anime, img: loggedIn.user.img_perfil }
     }
   } catch (error) {
     return {

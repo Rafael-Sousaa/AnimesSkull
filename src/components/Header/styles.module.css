@@ -283,10 +283,7 @@
   .navmenu {   
     padding-left: 10px;
     padding-right: 10px;
-    
-}
-
-
+  }
 }
 
 @media (max-width:768px){
@@ -306,7 +303,6 @@
     display: grid;
     grid-template-areas: 'menu logo';
     gap: 1rem;
-  
   }
   .div555{
     gap: .6rem;

@@ -7,11 +7,9 @@
 
 .divAnimes{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+    grid-template-columns: repeat(auto-fill, minmax(158.4px, 158.4px));
     gap: 1.5rem;
     text-align: center;
-    
-    
 }
 
 
@@ -22,11 +20,11 @@
 .botao{
     cursor: pointer;
     margin: 0;
+    transition: ease-in-out all .3s;
 }
 
 .botao:hover{
-    transform: scale(105%);
-    transition: all .5s;
+    transform: scale(1.1, 1.1); 
 }
 
 
@@ -38,7 +36,7 @@
     margin: 0;
 }
 
-@media (max-width: 595px){
+@media (max-width: 622px){
     .divAnimes{
         grid-template-columns: repeat(auto-fill, minmax(135px, 135px));
     }
@@ -48,13 +46,26 @@
     }    
 }
 
-@media (max-width: 375px){
+@media (max-width: 389px){
     .divAnimes{
-        grid-template-columns: repeat(auto-fill, minmax(120px, 120px));
+        grid-template-columns: repeat(auto-fill, minmax(126px, 126px));
     }
     .divAnimes img{
-        max-width: 120px;
+        max-width: 126px;
         max-height:207px;
+    }    
+    .divAnimes p{
+       font-size: 14px;
+    }
+}
+
+@media (max-width: 280px){
+    .divAnimes{
+        grid-template-columns: repeat(auto-fill, minmax(80px, 80px));
+    }
+    .divAnimes img{
+        max-width: 80px;
+        max-height:137px;
     }    
     .divAnimes p{
        font-size: 14px;

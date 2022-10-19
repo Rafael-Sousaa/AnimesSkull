@@ -11,11 +11,12 @@ export interface AnimePage {
   temp: string
   maxEps: string
   titulo: string
+  img: string
 }
 
 const Ep = (props: AnimePage) => {
   return (
-    <PageTemplate>
+    <PageTemplate img={props.img}>
       <EpTemplate {...props} />
     </PageTemplate>
   )
@@ -56,7 +57,8 @@ export const getServerSideProps: GetServerSideProps = async (
           episodio: episodio,
           temp: temp,
           maxEps: maxEps.toString(),
-          titulo: params.titulo
+          titulo: params.titulo,
+          img: loggedIn.user.img_perfil
         }
       }
     } catch (error) {

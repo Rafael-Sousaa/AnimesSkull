@@ -11,11 +11,13 @@ export const checkIfIsLoggedIn = async (context: GetServerSidePropsContext) => {
     if (res.error) throw new Error()
 
     return {
-      token: token
+      token: token,
+      user: res.user
     }
   } catch (error) {
     return {
-      token: null
+      token: null,
+      user: null
     }
   }
 }

@@ -375,3 +375,32 @@ const Animes: Array<Anime> = [
 ]
 
 export default Animes
+
+const a = [
+  {
+    titulo: '',
+    abreviacao: '',
+    imagem: '',
+    sinopse: '',
+    ano: '',
+    generos: [
+      { genero: '' },
+      { genero: '' },
+      { genero: '' },
+      { genero: '' },
+      { genero: '' }
+    ],
+    temporadas: [
+      {
+        temporada: 1,
+        episodios: [
+          {
+            episodio: 1,
+            imagem: '',
+            video: Episodios.BokunoHero6.ep1
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -12,28 +12,30 @@ export default async function handler(
   switch (method) {
     case 'POST':
       try {
-        const { nome, email, password } = req.body
+        const { name: name2, email: email2, password } = req.body
 
-        if ((nome === '' && email === '') || !password) {
-          return res.status(400).json({ error: true, msg: 'Invalid data' })
+        if ((name2 === '' && email2 === '') || !password) {
+          return res.status(400).json({ error: true, msg: 'Dados inválidos' })
         }
         let user
 
-        if (email !== '') {
-          user = await getUserEmail(email)
+        if (email2 !== '') {
+          user = await getUserEmail(email2)
         } else {
-          user = await getUserName(nome)
+          user = await getUserName(name2)
         }
 
         if (!user) {
-          return res.status(400).json({ error: true, msg: 'User not found' })
+          return res
+            .status(400)
+            .json({ error: true, msg: 'Usuário não encontrado' })
         }
 
         if (!(await bcrypt.compare(password.toString(), user.password_hash))) {
-          return res.status(400).json({ error: true, msg: 'Invalid password' })
+          return res.status(400).json({ error: true, msg: 'Senha inválida' })
         }
 
-        const { id, name } = user
+        const { id, name, email } = user
         const token = jwt.sign(
           { id, name, email },
           process.env.TOKEN_SECRET || '',
@@ -44,7 +46,7 @@ export default async function handler(
 
         res.status(200).json({ token, user: { id, name, email } })
       } catch (error) {
-        res.status(400).json({ error: true, msg: 'User not found' })
+        res.status(400).json({ error: true, msg: 'Usuário não encontrado' })
       }
       break
 

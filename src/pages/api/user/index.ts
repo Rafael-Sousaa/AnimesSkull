@@ -32,8 +32,8 @@ export default async function handler(
           name: name,
           email: email,
           password_hash: passwordHash,
-          img_perfil: '',
-          img_fundo: ''
+          img_perfil: '/images/anyaperfil.png',
+          img_fundo: '/images/eternityaperfilfundo.png'
         }
 
         await createUser(data)
@@ -54,9 +54,9 @@ export default async function handler(
         }
 
         res.status(400).json({
-          error: error,
-          name: name,
-          email: email
+          error: true,
+          name: dataName,
+          email: dataEmail
         })
       }
       break

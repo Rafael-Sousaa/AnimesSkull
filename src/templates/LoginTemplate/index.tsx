@@ -59,9 +59,7 @@ const LoginTemplate = () => {
             >
               Login
             </button>
-            <div className="text-danger">
-              {form.error && 'Credenciais Inválidas'}
-            </div>
+            <div className="text-danger">{form.error}</div>
             <Link href={'/cadastro'}>
               <a className={styles.link}>Cadastre-se</a>
             </Link>
