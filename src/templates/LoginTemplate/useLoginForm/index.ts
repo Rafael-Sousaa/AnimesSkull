@@ -5,7 +5,7 @@ import { setCookie } from 'nookies'
 
 import { Inputs, isEmail, validation } from './validate'
 import { useRouter } from 'next/router'
-import AuthService from '@services/auth'
+import AuthService from '@services/user'
 
 const useLoginForm = () => {
   const router = useRouter()

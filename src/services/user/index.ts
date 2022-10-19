@@ -51,7 +51,12 @@ export default class AuthService {
     )
     return response.data
   }
-
+  static async buscarUsuario(id: number, token: string) {
+    const response = await api.get<dto.DtoUserResponse>(`/api/user/${id}`, {
+      headers: { authorization: `Bearer ${token}` }
+    })
+    return response.data
+  }
   static async validate(token: string) {
     const response = await api.get<dto.DtoValidateResponse>(
       `${

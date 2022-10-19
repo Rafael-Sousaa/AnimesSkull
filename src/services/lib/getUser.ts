@@ -9,9 +9,8 @@ interface TokenPayload {
   exp: number
 }
 
-export default async function validateUser(authorization: string) {
+export default async function getUser(token: string) {
   try {
-    const [, token] = authorization.split(' ')
     const TOKEN_SECRET = process.env.TOKEN_SECRET || ''
     const data = jwt.verify(token, TOKEN_SECRET)
 
@@ -20,7 +19,6 @@ export default async function validateUser(authorization: string) {
     const { id, name, email } = data as TokenPayload
 
     const user = await verifyUser(id, name, email)
-
     if (!user) throw new Error('error')
 
     return user

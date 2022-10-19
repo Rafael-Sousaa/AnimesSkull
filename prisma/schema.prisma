@@ -16,6 +16,8 @@ model User{
   id Int @id @default(autoincrement())
   name String  @unique @db.VarChar(200)
   email String  @unique  @db.VarChar(200)
-  password_hash String  @db.Text  
+  password_hash String  @db.Text
+  img_perfil String? @db.VarChar(200)  
+  img_fundo String?  @db.VarChar(200)
 } 
 

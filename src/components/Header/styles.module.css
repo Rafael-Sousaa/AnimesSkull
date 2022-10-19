@@ -30,7 +30,7 @@
 }
 .navContainer { 
   display: grid;
-  grid-template-areas: "logo menu search";
+  grid-template-areas: "logo menu search perfil";
   max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
@@ -42,7 +42,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-
+  
 }
 
 .navBtnMenu {
@@ -64,6 +64,22 @@
   cursor: pointer;
   background-color:rgba(12, 12, 12, 0.80);
   color: #f0e7ea;
+  
+}
+
+.divmain{
+  display: flex;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: distribute;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   
 }
 
@@ -145,6 +161,18 @@
   bottom: 0%;
   z-index: 999999; 
   
+}
+.div444{
+  display: grid;
+  grid-template-areas: 'logo menu';
+  gap: 2rem;
+
+}
+
+.div555{
+  display: grid;
+  grid-template-areas: 'search perfil';
+  gap: 2rem;
 }
 
 .divBlock2{
@@ -236,6 +264,7 @@
   cursor: pointer;
 }
 
+
 @keyframes animation {
   0% {   
     opacity: 0;
@@ -248,7 +277,8 @@
  
 @media (max-width:1200px){
   .navContainer {  
-    grid-template-areas: "menu logo search";
+    grid-template-areas: "menu logo search perfil";
+    
   }
   .navmenu {   
     padding-left: 10px;
@@ -256,13 +286,30 @@
     
 }
 
+
 }
 
 @media (max-width:768px){
   .h1logo{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .navmenu {
     height: 61px;
   }
+  .perfil{
+    margin-top: -5px;
+  }
+  .divmain{
+    justify-content: space-between;
+  }
+  .div444{
+    display: grid;
+    grid-template-areas: 'menu logo';
+    gap: 1rem;
+  
+  }
+  .div555{
+    gap: .6rem;
+  }
+  
 }

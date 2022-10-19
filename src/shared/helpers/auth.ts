@@ -1,4 +1,4 @@
-import AuthService from '@services/auth'
+import AuthService from '@services/user'
 import { GetServerSidePropsContext } from 'next'
 import Cookies from './cookies'
 

@@ -1,0 +1,34 @@
+.container{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    background-color: blueviolet;
+    position: relative;
+    
+    
+    
+}
+
+
+.div12{
+    background-color: aqua;
+    position:absolute;
+    top:100%;
+    display: inline;
+    
+    
+
+}
+.imagem{
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    
+    
+  
+}
+
+.ul li{
+    display: inline-block;
+    
+}

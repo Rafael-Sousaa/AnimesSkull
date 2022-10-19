@@ -29,3 +29,8 @@ export interface CarouselInterface {
   link: string
   imagem: string
 }
+export interface User {
+  id: number
+  name: string
+  email: string
+}

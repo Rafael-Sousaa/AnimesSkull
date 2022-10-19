@@ -4,8 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Inputs, validation } from './validate'
 import { useRouter } from 'next/router'
-import AuthService from '@services/auth'
-import { DtoErrorCadastroResponse } from '@services/auth/dtoResponses'
+import AuthService from '@services/user'
+import { DtoErrorCadastroResponse } from '@services/user/dtoResponses'
 
 const useCadastroForm = () => {
   const router = useRouter()

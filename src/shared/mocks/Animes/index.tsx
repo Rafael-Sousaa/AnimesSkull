@@ -124,6 +124,11 @@ const Animes: Array<Anime> = [
             episodio: 1,
             imagem: '/images/chaisawman11.jpg',
             video: Episodios.ChainsawMan.ep1
+          },
+          {
+            episodio: 2,
+            imagem: '/images/chaisawman12.jpg',
+            video: Episodios.ChainsawMan.ep2
           }
         ]
       }
@@ -298,7 +303,7 @@ const Animes: Array<Anime> = [
   {
     titulo: 'Cyberpunk Edgerunners',
     abreviacao: 'Cyberpunk',
-    imagem: '/images/Cyberpunk.jpg',
+    imagem: '/images/CyberPunk.jpg',
     sinopse:
       'Para sobreviver em uma realidade distópica na qual a corrupção e os implantes cibernéticos controlam tudo, um jovem talentoso e impulsivo decide se tornar um mercenário.',
     ano: '2022',

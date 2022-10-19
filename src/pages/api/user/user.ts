@@ -31,7 +31,9 @@ export default async function handler(
         const data = {
           name: name,
           email: email,
-          password_hash: passwordHash
+          password_hash: passwordHash,
+          img_perfil: '',
+          img_fundo: ''
         }
 
         await createUser(data)
@@ -52,9 +54,9 @@ export default async function handler(
         }
 
         res.status(400).json({
-          error: true,
-          name: dataName,
-          email: dataEmail
+          error: error,
+          name: name,
+          email: email
         })
       }
       break

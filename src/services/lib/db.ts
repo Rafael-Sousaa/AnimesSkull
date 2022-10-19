@@ -5,6 +5,8 @@ export interface UserType {
   name: string
   email: string
   password_hash: string
+  img_perfil?: string
+  img_fundo?: string
 }
 
 export async function getAllUsers() {

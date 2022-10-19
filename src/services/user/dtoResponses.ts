@@ -36,3 +36,9 @@ export interface DtoErrorCadastroResponse {
 export interface DtoSuccessResponse {
   msg: string
 }
+
+export interface DtoUserResponse {
+  id: number
+  name: string
+  email: string
+}
