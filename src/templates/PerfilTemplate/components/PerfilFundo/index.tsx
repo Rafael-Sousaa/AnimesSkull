@@ -7,10 +7,15 @@ import styles from './styles.module.css'
 
 const PerfilFundo = (props: perfilimgprops) => {
   const router = useRouter()
-  const [img, setimg] = useState(props.user.img_fundo)
+  const [imgUser, setimg] = useState(props.user.img_fundo)
   const alterarImagem = async () => {
     try {
-      await AuthService.atualizarImg(props.user.id, props.token, undefined, img)
+      await AuthService.atualizarImg(
+        props.user.id,
+        props.token,
+        undefined,
+        imgUser
+      )
       router.reload()
     } catch (error) {}
   }
@@ -18,7 +23,7 @@ const PerfilFundo = (props: perfilimgprops) => {
     <div className={styles.main}>
       <div onClick={() => props.setshow(false)} className={styles.main2}></div>
       <div className={styles.container2}>
-        <img className={styles.img0} src={img} alt="" />
+        <img className={styles.img0} src={imgUser} alt="" />
 
         <div className={styles.container}>
           <div className={styles.container3}>
@@ -50,7 +55,13 @@ const PerfilFundo = (props: perfilimgprops) => {
                   }}
                   key={img}
                 >
-                  <img className={styles.imagem} src={img} alt="" />
+                  <img
+                    className={`${styles.imagem} ${
+                      imgUser == img && styles.imagemSelected
+                    }`}
+                    src={img}
+                    alt=""
+                  />
                 </li>
               ))}
             </ul>

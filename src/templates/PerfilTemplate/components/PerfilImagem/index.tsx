@@ -7,10 +7,15 @@ import styles from './styles.module.css'
 
 const PerfilImagem = (props: perfilimgprops) => {
   const router = useRouter()
-  const [img, setimg] = useState(props.user.img_perfil)
+  const [imgUser, setimg] = useState(props.user.img_perfil)
   const alterarImagem = async () => {
     try {
-      await AuthService.atualizarImg(props.user.id, props.token, img, undefined)
+      await AuthService.atualizarImg(
+        props.user.id,
+        props.token,
+        imgUser,
+        undefined
+      )
       router.reload()
     } catch (error) {}
   }
@@ -22,12 +27,11 @@ const PerfilImagem = (props: perfilimgprops) => {
           className={styles.main2}
         ></div>
         <div className={styles.container}>
-          <img className={styles.img1} src={img} alt="" />
+          <img className={styles.img1} src={imgUser} alt="" />
           <div className={styles.div67}>
             <h2 className={styles.h2}>Escolha seu Avatar</h2>
             <p className={styles.p}>
-              Escolha seu personagem preferido!Você pode mudá-lo a qualquer
-              momento.
+              Selecione a imagem do seu personagem favorito.
             </p>
             <button onClick={alterarImagem} className={styles.button}>
               Salvar
@@ -43,7 +47,13 @@ const PerfilImagem = (props: perfilimgprops) => {
             <ul className={styles.ul}>
               {imagem.Perfil.map(img => (
                 <li onClick={() => setimg(img)} key={img}>
-                  <img className={styles.imagem} src={img} alt="" />
+                  <img
+                    className={`${styles.imagem} ${
+                      imgUser == img && styles.imagemSelected
+                    }`}
+                    src={img}
+                    alt=""
+                  />
                 </li>
               ))}
             </ul>

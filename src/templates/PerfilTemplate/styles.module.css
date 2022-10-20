@@ -1,6 +1,9 @@
 .perfil{
     width: 100%;
     min-height: 100vh;
+    background-color:#050727;
+}
+.a{
     background-color:#020312;
 }
 .container{
@@ -9,23 +12,28 @@
     text-align: center;   
     
 }
-
+.h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;  
+}
 .bannerImagem{
     width: 100%;
     height: 300px;
 }
 
-.profilePic{
-    position: absolute;
+.profilePic{ 
     width: 120px;
     height: 120px;   
-    border-radius: 60px;
-    bottom:2px;
-    left: 150px;  
+    border-radius: 60px; 
     background-size:cover;
-    
+    margin-top: -30px;
+    margin-left: 150px; 
 }
-
+.name{ 
+    margin-left:1.5rem;
+    margin-top:1rem;
+}
 @media (max-width:768px){
     .bannerImagem{ 
         margin-top:12px;
@@ -36,8 +44,17 @@
     }
     .profilePic{ 
         width: 90px;
-        height: 90px;    
-        
+        height: 90px;  
+        margin-top: -22.5px;
+        margin-left: auto;   
+        margin-right: auto;   
+    }
+    .container{
+        flex-direction: column;
+    }
+    .name{ 
+        margin-left:.5rem;
+        margin-top:1rem;
     }
 }
-
+ 

@@ -8,8 +8,8 @@
     width: 100%;
     height: 100%;
     margin:0 auto;
-    z-index: 9999;
-    background-color: #23252b4d;
+    z-index: 99999;
+    background-color: #23252b73;
     
     
 }
@@ -23,8 +23,8 @@
     width: 100%;
     height: 100%;
     margin:0 auto;
-    z-index: 999;
-   
+    z-index: 9999;
+   cursor: pointer;
 }
 
 .container{
@@ -68,22 +68,27 @@
 }
 .imagem{
     width: 100%;
-    height: 100%;
-    padding: .5rem;
+    height: 100%; 
     cursor: pointer;
     z-index: 999999999;
+    border: 3px solid #23252bf5;
 }
-
+.imagem:hover{
+    border: 3px solid #e974726e;
+}
+.imagemSelected{
+    border: 3px solid #b80502 !important;
+}
 .img0{
     width:100%;
     height: 200px;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .ul{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     padding: 0;
     overflow-y: scroll; 
     height: 300px;  
@@ -92,7 +97,9 @@
 .ali{
     max-width: 90%;
     margin: 0 auto;
+    padding: .5rem;
 }
+ 
 .button{
     margin: 4px;
     background-color:#B01E1C;
@@ -123,36 +130,72 @@
     
 }
 
-/* .container{
-    width: 80px;
-    background-color: aqua;
-    border: 1px solid red;
+
+@media (max-width:1100px){
+    .container2{ 
+        width: 80%;
+        height: 50%;
+    }   
 }
 
-.imagem{
-    width: 50%;
-    height: 100%;
-    padding: .5rem;
-    cursor: pointer;
+@media (max-width:850px){
+     .img0{ 
+        height: 28vh; 
+    }
+    .container3{
+        padding: 10px; 
+        flex-direction: column;
+        text-align: center;
+    }
+    .ul{ 
+        grid-template-columns: auto; 
+        height: 52vh;  
+    }
+    .ali{ 
+        height: 18vh; 
+    }
 }
-.h2{
-    text-align: start;
 
-}
+@media (max-width:650px){
+    .container2{ 
+        width: 90%; 
+    } 
+    .img0{ 
+       height: 20vh; 
+   }
+   .h2{
+    font-size: 1.2rem; 
+   }
 
 .p{
-    text-align: start;
-
+    font-size: .8rem; 
+ }
+ .button{
+    padding: .4rem .6rem; 
 }
-.button{
-    margin: 3px;
-}
-
-.divcontainerimagens{
-    width: 50px;
-    background-color: blueviolet;
 }
 
-.ul li{
-    display: inline-block;
-} */
+@media (max-width:545px){
+    .img0{ 
+       height: 18vh; 
+   }
+   .ali{ 
+    height: 12vh; 
+    }
+}
+
+@media (max-width:545px){
+    
+    .img0{ 
+       height: 17vh; 
+   }
+   .ali{ 
+    height: 15vh; 
+    }
+}
+@media (max-width:374px){
+    .img0{ 
+       height: 16vh; 
+   }
+    
+}

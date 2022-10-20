@@ -111,7 +111,7 @@
 .divSearch{  
   position: absolute;
   margin-top: 60px;  
-  z-index: 9999999999999 ;
+  z-index: 99999 ;
   left: 0;
   width: 100%;
   text-align: center;
@@ -308,4 +308,13 @@
     gap: .6rem;
   }
   
+}
+
+@media (max-width:355px){
+  .h1logo{
+    font-size: 1rem;
+  }
+  .div444{ 
+    gap: .6rem;
+  }
 }
