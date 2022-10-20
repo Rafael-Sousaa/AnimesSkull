@@ -19,5 +19,4 @@ model User{
   password_hash String  @db.Text
   img_perfil String? @db.VarChar(200)  
   img_fundo String?  @db.VarChar(200)
-} 
-
+}

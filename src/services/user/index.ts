@@ -33,7 +33,27 @@ export default class AuthService {
       {
         name,
         password,
-        email
+        email,
+        img_perfil: undefined,
+        img_fundo: undefined
+      },
+      {
+        headers: { authorization: `Bearer ${token}` }
+      }
+    )
+    return response.data
+  }
+  static async atualizarImg(
+    id: number,
+    token: string,
+    img_perfil: string | undefined,
+    img_fundo: string | undefined
+  ) {
+    const response = await api.put<dto.DtoSuccessResponse>(
+      `/api/user/${id}`,
+      {
+        img_perfil,
+        img_fundo
       },
       {
         headers: { authorization: `Bearer ${token}` }

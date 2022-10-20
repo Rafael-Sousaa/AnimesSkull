@@ -32,8 +32,8 @@ export default async function handler(
           name: name,
           email: email,
           password_hash: passwordHash,
-          img_perfil: '/images/anyaperfil.png',
-          img_fundo: '/images/eternityaperfilfundo.png'
+          img_perfil: '/images/perfil/dinoperfil.png',
+          img_fundo: '/images/perfilfundo/blackcloverperfilfundo.png'
         }
 
         await createUser(data)

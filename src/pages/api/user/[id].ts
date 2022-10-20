@@ -32,17 +32,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     case 'PUT':
       try {
-        const { name, email, password } = req.body
+        const { name, email, password, img_perfil, img_fundo } = req.body
 
-        let passwordHash: string = ''
+        let passwordHash: string | undefined = undefined
         if (password != null) {
           passwordHash = bcrypt.hashSync(password, 10)
         }
 
         const data = {
-          name: name,
-          email: email,
-          password_hash: passwordHash
+          name: name || undefined,
+          email: email || undefined,
+          password_hash: passwordHash,
+          img_perfil: img_perfil || undefined,
+          img_fundo: img_fundo || undefined
         }
         await updateUser(Number(id), data)
 

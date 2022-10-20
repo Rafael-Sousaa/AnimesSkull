@@ -57,22 +57,19 @@ export async function createUser(data: UserType) {
     data
   })
 }
-
-export async function updateUser(id: number, data: UserType) {
-  let password: string | undefined = undefined
-  if (data.password_hash !== '') {
-    password = data.password_hash
-  }
-
+export interface UserType2 {
+  name?: string
+  email?: string
+  password_hash?: string
+  img_perfil?: string
+  img_fundo?: string
+}
+export async function updateUser(id: number, data: UserType2) {
   await prisma.user.update({
     where: {
       id
     },
-    data: {
-      email: data.email,
-      name: data.name,
-      password_hash: password
-    }
+    data
   })
 }
 

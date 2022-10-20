@@ -9,11 +9,25 @@ const PerfilTemplate = (props: perfilprops) => {
   const [showPerfil, setshowPerfil] = useState(false)
   const [showPerfilfundo, setshowPerfilfundo] = useState(false)
 
-  const mostrarperfil = () => setshowPerfil(!showPerfil)
-  const mostrarperfilfundo = () => setshowPerfilfundo(!showPerfilfundo)
+  const mostrarperfil = () => {
+    setshowPerfil(!showPerfil)
+    if (!showPerfil) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }
+  const mostrarperfilfundo = () => {
+    setshowPerfilfundo(!showPerfilfundo)
+    if (!showPerfilfundo) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }
 
   return (
-    <>
+    <div className={styles.perfil}>
       <div className={styles.container}></div>
       <div className="subMenu"></div>
       <div className="walpaper"></div>
@@ -32,9 +46,25 @@ const PerfilTemplate = (props: perfilprops) => {
         <h2 className={styles.h2}>{props.user.name}</h2>
       </div>
 
-      {showPerfil && <PerfilImagem />}
-      {showPerfilfundo && <PerfilFundo />}
-    </>
+      {showPerfil && (
+        <div className={'d-none d-xl-block'}>
+          <PerfilImagem
+            {...props}
+            setimg={setshowPerfil}
+            setshow={setshowPerfil}
+          />
+        </div>
+      )}
+      {showPerfilfundo && (
+        <div className={'d-none d-xl-block'}>
+          <PerfilFundo
+            {...props}
+            setimg={setshowPerfilfundo}
+            setshow={setshowPerfilfundo}
+          />
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -1,7 +1,13 @@
+.perfil{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#020312;
+}
 .container{
     position: relative;
     display: flex;
-    text-align: center;    
+    text-align: center;   
+    
 }
 
 .bannerImagem{
@@ -23,7 +29,7 @@
 @media (max-width:768px){
     .bannerImagem{ 
         margin-top:12px;
-        width: auto;
+        width: 100%;
         height: 130px;
         object-fit: cover;
         object-position: center;

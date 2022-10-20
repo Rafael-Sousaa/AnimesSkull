@@ -1,23 +1,22 @@
 export const Perfil = [
-  '/images/anyaperfil.png',
-  '/images/astaperfil.png',
-  '/images/escudoperfil.png',
-  '/images/fushiguroperfil.png',
-  '/images/sukunaperfil.png',
-  '/images/gojoperfil.png',
-  '/images/itadoriperfil.png',
-  '/images/rimuruperfil.png',
-  '/images/senkuperfil.png',
-  '/images/yamiperfil.png',
-  '/images/takemichiperfil.png',
-  '/images/mikeyperfil.png'
+  '/images/perfil/anyaperfil.png',
+  '/images/perfil/astaperfil.png',
+  '/images/perfil/escudoperfil.png',
+  '/images/perfil/fushiguroperfil.png',
+  '/images/perfil/sukunaperfil.png',
+  '/images/perfil/gojoperfil.png',
+  '/images/perfil/itadoriperfil.png',
+  '/images/perfil/rimuruperfil.png',
+  '/images/perfil/senkuperfil.png',
+  '/images/perfil/yamiperfil.png',
+  '/images/perfil/takemichiperfil.png',
+  '/images/perfil/mikeyperfil.png'
 ]
 export const Perfilfundo = [
-  '/images/blackcloverperfilfundo.png',
-  '/images/eternityaperfilfundo.png',
-  '/images/samuraiperfilfundo.png',
-  '/images/slimeperfilfundo.png',
-  '/images/tatenoyushaperfilfundo.png',
-  '/images/todorokiperfilfundo.jpg',
-  '/images/tokyorevengersperfilfundo.png '
+  '/images/perfilfundo/blackcloverperfilfundo.png',
+  '/images/perfilfundo/eternityaperfilfundo.png',
+  '/images/perfilfundo/samuraiperfilfundo.png',
+  '/images/perfilfundo/slimeperfilfundo.png',
+  '/images/perfilfundo/tatenoyushaperfilfundo.png',
+  '/images/perfilfundo/tokyorevengersperfilfundo.png '
 ]

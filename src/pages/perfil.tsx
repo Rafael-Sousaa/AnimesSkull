@@ -6,6 +6,13 @@ import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 
 export interface perfilprops {
   user: User
+  token: string
+}
+export interface perfilimgprops {
+  user: User
+  token: string
+  setimg: Function
+  setshow: Function
 }
 
 const Perfil = (props: perfilprops) => {
@@ -24,7 +31,7 @@ export const getServerSideProps: GetServerSideProps = async (
     if (!loggedIn.token) throw new Error('error')
 
     return {
-      props: { user: loggedIn.user }
+      props: { user: loggedIn.user, token: loggedIn.token }
     }
   } catch (error) {
     return {
