@@ -44,6 +44,7 @@ export interface DtoErrorLoginResponse {
 
 export interface DtoSuccessResponse {
   msg: string
+  error: boolean
 }
 
 export interface DtoUserResponse {

@@ -37,6 +37,7 @@
     margin:0 auto;
     z-index: 9999;
     cursor: pointer;
+    
 }
 
 
@@ -95,15 +96,18 @@
     display: inline;
     padding: 1.5rem ;
     
+    
      
 }
 
-.ul{
+.ul {
     overflow-y: scroll;
     height: 400px;
     margin-bottom: 0;
     padding-bottom: 0;
+    
 }
+
 
 .h2{
     font-size: 1.5rem;

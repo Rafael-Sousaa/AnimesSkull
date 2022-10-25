@@ -166,7 +166,7 @@
   display: grid;
   grid-template-areas: 'logo menu';
   gap: 2rem;
-
+  
 }
 
 .div555{
@@ -298,11 +298,13 @@
   }
   .divmain{
     justify-content: space-between;
+    align-items: baseline;
+    
   }
   .div444{
     display: grid;
     grid-template-areas: 'menu logo';
-    gap: 1rem;
+    gap: auto;
   }
   .div555{
     gap: .6rem;
@@ -313,8 +315,5 @@
 @media (max-width:355px){
   .h1logo{
     font-size: 1rem;
-  }
-  .div444{ 
-    gap: .6rem;
   }
 }

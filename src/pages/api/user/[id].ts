@@ -48,7 +48,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         }
         await updateUser(Number(id), data)
 
-        res.status(200).json({ msg: 'Updated successfully' })
+        res.status(200).json({ msg: 'Updated successfully', error: false })
       } catch (error) {
         res.status(400).json({ error: true, msg: error })
       }

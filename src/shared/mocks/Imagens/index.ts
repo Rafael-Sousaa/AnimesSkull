@@ -1,4 +1,5 @@
 export const Perfil = [
+  '/images/perfil/dinoperfil.png',
   '/images/perfil/anyaperfil.png',
   '/images/perfil/astaperfil.png',
   '/images/perfil/escudoperfil.png',

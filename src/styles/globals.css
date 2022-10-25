@@ -20,6 +20,26 @@ html,body,#root{
   height:100%;   
 }
 
+
+*::-webkit-scrollbar {
+  width: 0.75rem;
+  
+}
+
+*::-webkit-scrollbar-track {
+  background: #23252bf5;
+ 
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:gray;
+  border-radius: 20px;
+  border: 4px solid #23252bf5;
+  height: 30px;
+}
+
+
+
 button{
   cursor:pointer; 
   border: none; 

@@ -24,7 +24,7 @@ export default class AuthService {
   static async atualizar(
     id: number,
     name: string,
-    password: string,
+    password: string | null,
     email: string,
     token: string
   ) {
