@@ -309,10 +309,19 @@
   .div555{
     gap: .6rem;
   }
+  .divlinhassinpose{
+    max-width: 50%;
+  }
   
 }
 
-@media (max-width:355px){
+@media (max-width:360px){
+  .h1logo{
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width:280px){
   .h1logo{
     font-size: 1rem;
   }
