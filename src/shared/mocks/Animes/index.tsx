@@ -376,6 +376,126 @@ const Animes: Array<Anime> = [
         ]
       }
     ]
+  },
+  {
+    titulo: 'Kage no Jitsuryokusha ni Naritakute',
+    abreviacao: 'Kage no Jitsuryokusha',
+    imagem: '/images/animes/CyberPunk.jpg',
+    sinopse:
+      'Grandes heróis e vilões diabólicos são os tipos de personagens que as pessoas ansiam por serem — mas não Cid Kagenou. Ele anseia se tornar o verdadeiro cérebro por trás de tudo isso, puxando as cordas, e tendo suas maquinações conduzir toda a história. Em sua vida anterior no Japão, ele não foi capaz de alcançar seus objetivos. Mas agora, renascido em um mundo de magia, ele mostrará a verdadeira eminência da sombra!',
+    ano: '2022',
+    generos: [
+      { genero: 'Acão' },
+      { genero: 'Comedia' },
+      { genero: 'Fantasia' }
+    ],
+    temporadas: [
+      {
+        temporada: 1,
+        episodios: [
+          {
+            episodio: 1,
+            video: Episodios.Kage.ep1,
+            imagem: '/images/ep/CyberPunk11.jpg'
+          },
+          {
+            episodio: 2,
+            video: Episodios.Kage.ep2,
+            imagem: '/images/ep/CyberPunk12.jpg'
+          },
+          {
+            episodio: 3,
+            video: Episodios.Kage.ep3,
+            imagem: '/images/ep/CyberPunk13.jpg'
+          },
+          {
+            episodio: 4,
+            video: Episodios.Kage.ep4,
+            imagem: '/images/ep/CyberPunk14.jpg'
+          },
+          {
+            episodio: 5,
+            video: Episodios.Kage.ep5,
+            imagem: '/images/ep/CyberPunk15.jpg'
+          },
+          {
+            episodio: 6,
+            video: Episodios.Kage.ep6,
+            imagem: '/images/ep/CyberPunk16.jpg'
+          },
+          {
+            episodio: 7,
+            video: Episodios.Kage.ep7,
+            imagem: '/images/ep/CyberPunk17.jpg'
+          },
+          {
+            episodio: 8,
+            video: Episodios.Kage.ep8,
+            imagem: '/images/ep/CyberPunk18.jpg'
+          },
+          {
+            episodio: 9,
+            video: Episodios.Kage.ep9,
+            imagem: '/images/ep/CyberPunk19.jpg'
+          },
+          {
+            episodio: 10,
+            video: Episodios.Kage.ep10,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 11,
+            video: Episodios.Kage.ep11,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 12,
+            video: Episodios.Kage.ep12,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 13,
+            video: Episodios.Kage.ep13,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 14,
+            video: Episodios.Kage.ep14,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 15,
+            video: Episodios.Kage.ep15,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 16,
+            video: Episodios.Kage.ep16,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 17,
+            video: Episodios.Kage.ep17,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 18,
+            video: Episodios.Kage.ep18,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 19,
+            video: Episodios.Kage.ep19,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          },
+          {
+            episodio: 20,
+            video: Episodios.Kage.ep20,
+            imagem: '/images/ep/CyberPunk110.jpg'
+          }
+        ]
+      }
+    ]
   }
 ]
 

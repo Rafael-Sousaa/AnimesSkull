@@ -16,12 +16,11 @@ const EpTemplate = (props: AnimePage) => {
           />
         </div>
         <div className={styles.div}>
-          <video
+          <iframe
+            style={{ width: '100%' }}
             src={props.episodio.video}
-            preload="metadata"
-            style={{ objectFit: 'fill' }}
-            controls
-          ></video>
+            allowFullScreen
+          />
         </div>
         <br />
         <div className={styles.div4}>

@@ -68,6 +68,29 @@ export const Bleach = {
   ep2: `/videos/file.mp4`
 }
 
+export const Kage = {
+  ep1: `https://mega.nz/embed/w8FkGDya#nzuWtEvnYdVCsQzf3Cfyqrhjnxymk75sIhODnBy0qmU`,
+  ep2: `https://mega.nz/embed/M4UXHYba#kZHhGyFHx_9EwYlzKKAUJRlIk13IhPf2k7Kvj094Yok`,
+  ep3: `https://mega.nz/embed/KFYTXBzD#aFdhhCJTPiGoKKVbA5f77F8yPCdQUuU_1K-X27_qx0g`,
+  ep4: `https://mega.nz/embed/SdZwjarI#pY7LHh9yG40dO3r-4-l0qheMEFUlXAnRx6Lrss7AURo`,
+  ep5: `https://mega.nz/embed/xltlyTpR#oBsSOG6kkWpgXenxrCmMYabw6uxqzarVkyeUqcCzUFc`,
+  ep6: `https://mega.nz/embed/zuAjAQDA#DGF8KZ38sL5QMSnEWEv3K_5yPaMrrVtWIYC_T3P6k74`,
+  ep7: `https://mega.nz/embed/XQ5k2SBS#neQl2W6iigNbbAJFqfKs4QrOERN6_9GMl_WDzs-COa0`,
+  ep8: `https://mega.nz/embed/w3hxmRSb#pB_NASafmg_-ZM3q9_InASLav0i853dZK_G3w__f0ko`,
+  ep9: `https://mega.nz/embed/IqwgRLQK#5pdV4dfs5SH7O6sLB0qXnM1qGue5-SzYsMOL06kQduo`,
+  ep10: `https://mega.nz/embed/3t1lBZAK#5Knq27PXdrmHepLDHRaTNSijdGsoJpi4osm_tK7g_fA`,
+  ep11: `https://mega.nz/embed/PANVhTYB#zSym0BQL52BusU1NpyMUEHrL4JrAK24zXdNqpYt-RiI`,
+  ep12: `https://mega.nz/embed/dmwF3DrA#FLyGcP0jRWJaunvk4KACV3kqlncrBQfvfaEQoMPllZQ`,
+  ep13: `https://mega.nz/embed/aA12wIra#Pfi98xDZmFkYZLl6k7b9sdA2cTgqsnd6S6RvvvjAaPE`,
+  ep14: `https://mega.nz/embed/dR521ZrZ#50WbYsHrXEGxcSkAdSLG7AX35p44xyK5wIO8l3HgiHc`,
+  ep15: `https://mega.nz/embed/G6I0jDzD#pTCRKMOCZ6liM-5Pj3yhpA6bhieCOtZ_YBXsZ8C0ZoU`,
+  ep16: `https://mega.nz/embed/S3BAUDrJ#1_Edm2ZKbO2EUocIjQC4GTgIgZs8rtQRkfk0NOFeBJs`,
+  ep17: `https://mega.nz/embed/pNxTjT5A#Kp1lLyejvm0wi9RcpyNXgqYdRlHnAOxh5bnKm8U4N80`,
+  ep18: `https://mega.nz/embed/JqYXUQSK#Q4VKlb8ftQ2jG4B79_vCOMKkll298BLFraVcuqPbif4`,
+  ep19: `https://mega.nz/embed/qdZWgLrA#4iqqq0xzx6_AtBkwdpWEqnOqZ7lYCg20CdA0gEGD_oE`,
+  ep20: `https://mega.nz/embed/OZRGASoC#LsUMudgogdFSIP1hOHhvrAZwmRQHzcsUMdjrMxobXyk`
+}
+
 const Episodios = {
   ep1: ``
 }
